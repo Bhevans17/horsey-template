@@ -13,7 +13,7 @@ const quotesList = [
   "quote 10"
 ];
 
-let index = 2;
+let i = 0;
 
 export default class Quotemaker extends React.Component {
   constructor(props) {
@@ -21,14 +21,21 @@ export default class Quotemaker extends React.Component {
     this.state = {
       currentQuote: quotesList[0]
     };
+    
+    this.prevQuote = this.prevQuote.bind(this);
+    this.nextQuote = this.nextQuote.bind(this);
   }
 
   prevQuote() {
-    this.state.currentQuote.setState({ currentQuote: quotesList - 1 });
+    i = i - 1; // increase i by one
+    i = quotesList.length % i; // if we've gone too high, start from `0` again
+    return this.setState({ currentQuote: quotesList[i] }); // give us back the item of where we are now
   }
 
   nextQuote() {
-    this.state.currentQuote.setState({ currentQuote: quotesList + 1 });
+    i = i + 1; // increase i by one
+    i = i % quotesList.length; // if we've gone too high, start from `0` again
+    return this.setState({ currentQuote: quotesList[i] }); // give us back the item of where we are now
   }
 
   render() {
@@ -40,7 +47,7 @@ export default class Quotemaker extends React.Component {
           </div>
           <div class="button-wrapper">
             <button onClick={this.prevQuote}>Previous</button>
-            <button onClick={this.nextQoute}>Next</button>
+            <button onClick={this.nextQuote}>Next</button>
           </div>
         </div>
       </div>
