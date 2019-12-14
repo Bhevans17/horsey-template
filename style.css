@@ -40,6 +40,11 @@ body {
     margin: 20px;
   }
 
+  nav ul li a:hover {
+    color: grey;
+    transition: 0.4s;
+  }
+
   main {
     height: 100vh;
     display: flex;
@@ -79,6 +84,12 @@ body {
     background-color: white;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #main-content-btn-large:hover {
+    background-color: grey;
+    color: white;
+    transition: 0.4s;
   }
 
   .main-content-icons i {
