@@ -1,0 +1,103 @@
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+}
+
+/************************** LEFT SIDE **************************/
+.left-side {
+  width: 45%;
+  height: 100vh;
+  background-position: center;
+  background-image: url("img/boat.png");
+}
+
+.logo {
+  position: relative;
+  left: 5%;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/************************** RIGHT SIDE **************************/
+.right-side {
+  width: 65%;
+}
+
+nav {
+  width: 80%;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  margin: 0 auto;
+  border: 1px solid orange;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+.right-side-content {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid blue;
+}
+
+.mini-image-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  align-items: center;
+  height: 15vh;
+  text-align: center;
+  border: 1px solid green;
+  margin: 0 auto;
+}
+
+.mini-image {
+  height: 50%;
+  width: 50%;
+}
+
+.mini-image h5,
+.mini-image p {
+  margin: 0;
+  padding: 0;
+}
+
+.mini-image img {
+  height: 50%;
+  width: 50%;
+}
