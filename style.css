@@ -51,7 +51,7 @@ body {
   }
 
   #left-side-image {
-    width: 40%;
+    width: 60%;
     height: 100vh;
     background: url("./img/boat.png");
     background-position: center;
@@ -61,6 +61,7 @@ body {
   .main-content-wrapper {
     width: 60%;
     height: 100vh;
+    box-shadow: 0px 0px 10px #232931;
   }
 
   .main-content {
